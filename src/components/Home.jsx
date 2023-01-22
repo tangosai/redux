@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { addImage, removeImage } from "../redux/slices/images";
+import { addImage, removeImage, resetImage } from "../redux/slices/images";
 
 const Home = () => {
   const dispatch = useDispatch();
@@ -28,6 +28,13 @@ const Home = () => {
             <div className="flex items-center gap-x-3">
               <button className="bg-violet-600 text-white rounded px-6 py-2.5">
                 Submit
+              </button>
+              <button
+                type="button"
+                className="bg-violet-600 text-white rounded px-6 py-2.5"
+                onClick={() => dispatch(resetImage())}
+              >
+                Reset
               </button>
               <Link to="images" className=" text-gray-500 font-semibold">
                 View

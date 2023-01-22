@@ -10,8 +10,11 @@ const imagesSlice = createSlice({
     removeImage(state, action) {
       state.splice(action.payload, 1);
     },
+    resetImage(state) {
+      return (state = []);
+    },
   },
 });
 
-export const { addImage, removeImage } = imagesSlice.actions;
+export const { addImage, removeImage, resetImage } = imagesSlice.actions;
 export default imagesSlice.reducer;

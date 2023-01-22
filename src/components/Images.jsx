@@ -9,7 +9,13 @@ export const Images = () => {
         <div className="grid grid-cols-4 gap-5 pt-5">
           {images.map((item, index) => {
             return (
-              <img src={item} width="480" className="w-full" key={index} />
+              <img
+                src={item}
+                width="480"
+                className="w-full"
+                key={index}
+                alt={index}
+              />
             );
           })}
         </div>
